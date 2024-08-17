@@ -49,13 +49,13 @@ with open('historical_trades.csv', 'w', newline='') as csvfile:
         time.sleep(1)
 
 # Efter loopningen, skriv ut sammanfattningen
-print(f"Antal köporders: {buy_orders}, Total köpt volym: {buy_volume}")
-print(f"Antal säljorders: {sell_orders}, Total såld volym: {sell_volume}")
+print(f"buy order amounts: {buy_orders}, total bought volume: {buy_volume}")
+print(f"sell order amounts: {sell_orders}, total sold volume: {sell_volume}")
 
 # Avgör om det har varit flest köp- eller säljorder
 if buy_orders > sell_orders:
-    print("Det har varit flest köporders de senaste 3 dygnen.")
+    print("mostly buy orders the last 3 days.")
 elif sell_orders > buy_orders:
-    print("Det har varit flest säljorders de senaste 3 dygnen.")
+    print("mostly sell orders the last 3 daysn.")
 else:
-    print("Antalet köp- och säljorders är lika de senaste 3 dygnen.")
+    print("buy and sell orders equal the last 3 days (almost impossible).")
